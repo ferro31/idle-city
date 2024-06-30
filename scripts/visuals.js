@@ -25,6 +25,28 @@ function updateButtonState(buttonId, cost) {
     }
 }
 
+function getAffordableBuildings() {
+    affordable = []
+    buildingButtons.forEach(button => {
+        const building = button.getAttribute('data-building');
+        if (canAfford(buildingCosts[building])) {
+            affordable.push(building)
+        }
+    });
+    return affordable
+}
+
+function getAffordableUpgrades() {
+    affordable = []
+    upgradeButtons.forEach(button => {
+        const building = button.getAttribute('data-upgrade');
+        if (canAfford(upgradeCosts[building])) {
+            affordable.push(building)
+        }
+    });
+    return affordable
+}
+
 function updateUpgradeCosts() {
     upgradeButtons.forEach(button => {
         const upgrade = button.getAttribute('data-upgrade');

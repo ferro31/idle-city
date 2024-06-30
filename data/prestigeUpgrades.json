@@ -1,32 +1,131 @@
 {
-    "woodmulti1": {
-        "title": "Wood Multiplier",
-        "text": "x1.5 Wood<br><small><span id=\"prestige-woodmulti1-cost\">0</span> PP</small>",
-        "pp": 1,
-        "level": 0,
-        "id": "woodmulti1-prestige",
-        "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.woodmulti1.pp / 2)",
-        "checkIfCanBuy": "resources.pp >= prestigeUpgrades.woodmulti1.pp",
-        "bought": "if (!prestigeUpgrades.woodmulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.woodmulti1.isBought = true; resources.pp -= prestigeUpgrades.woodmulti1.pp; prestigeUpgrades.woodmulti1.level++; prestigeUpgrades.woodmulti1.pp *= 1.5; updateVisuals();"
+    "boosts": {
+        "woodmulti1": {
+            "title": "Wood Multiplier",
+            "text": "x1.5 All Wood Production<br><small><span id=\"prestige-woodmulti1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "woodmulti1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.woodmulti1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.woodmulti1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.woodmulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.woodmulti1.isBought = true; resources.pp -= prestigeUpgrades.boosts.woodmulti1.pp; prestigeUpgrades.boosts.woodmulti1.level++; prestigeUpgrades.boosts.woodmulti1.pp *= 3.5; updateVisuals();"
+        },
+        "stonemulti1": {
+            "title": "Stone Multiplier",
+            "text": "x1.5 All Stone Production<br><small><span id=\"prestige-stonemulti1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "stonemulti1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.stonemulti1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.stonemulti1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.stonemulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.stonemulti1.isBought = true; resources.pp -= prestigeUpgrades.boosts.stonemulti1.pp; prestigeUpgrades.boosts.stonemulti1.level++; prestigeUpgrades.boosts.stonemulti1.pp *= 3.5; updateVisuals();"
+        },
+        "foodmulti1": {
+            "title": "Food Multiplier",
+            "text": "x1.5 All Food Production<br><small><span id=\"prestige-foodmulti1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "foodmulti1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.foodmulti1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.foodmulti1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.foodmulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.foodmulti1.isBought = true; resources.pp -= prestigeUpgrades.boosts.foodmulti1.pp; prestigeUpgrades.boosts.foodmulti1.level++; prestigeUpgrades.boosts.foodmulti1.pp *= 3.5; updateVisuals();"
+        },
+        "woodclick1": {
+            "title": "Wood Click Multiplier",
+            "text": "x2 Wood/Click<br><small><span id=\"prestige-woodclick1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "woodclick1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.woodclick1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.woodclick1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.woodclick1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.woodclick1.isBought = true; resources.pp -= prestigeUpgrades.boosts.woodclick1.pp; prestigeUpgrades.boosts.woodclick1.level++; prestigeUpgrades.boosts.woodclick1.pp *= 3.5; updateVisuals();"
+        },
+        "stoneclick1": {
+            "title": "Stone Click Multiplier",
+            "text": "x2 Stone/Click<br><small><span id=\"prestige-stoneclick1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "stoneclick1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.stoneclick1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.stoneclick1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.stoneclick1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.stoneclick1.isBought = true; resources.pp -= prestigeUpgrades.boosts.stoneclick1.pp; prestigeUpgrades.boosts.stoneclick1.level++; prestigeUpgrades.boosts.stoneclick1.pp *= 3.5; updateVisuals();"
+        },
+        "foodclick1": {
+            "title": "Food Click Multiplier",
+            "text": "x2 Food/Click<br><small><span id=\"prestige-foodclick1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "foodclick1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.foodclick1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.foodclick1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.foodclick1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.foodclick1.isBought = true; resources.pp -= prestigeUpgrades.boosts.foodclick1.pp; prestigeUpgrades.boosts.foodclick1.level++; prestigeUpgrades.boosts.foodclick1.pp *= 3.5; updateVisuals();"
+        },
+        "woodgen1": {
+            "title": "Wood Gen Multiplier",
+            "text": "x2 Wood/Second<br><small><span id=\"prestige-woodgen1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "woodgen1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.woodgen1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.woodgen1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.woodgen1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.woodgen1.isBought = true; resources.pp -= prestigeUpgrades.boosts.woodgen1.pp; prestigeUpgrades.boosts.woodgen1.level++; prestigeUpgrades.boosts.woodgen1.pp *= 3.5; updateVisuals();"
+        },
+        "stonegen1": {
+            "title": "Stone Gen Multiplier",
+            "text": "x2 Stone/Second<br><small><span id=\"prestige-stonegen1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "stonegen1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.stonegen1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.stonegen1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.stonegen1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.stonegen1.isBought = true; resources.pp -= prestigeUpgrades.boosts.stonegen1.pp; prestigeUpgrades.boosts.stonegen1.level++; prestigeUpgrades.boosts.stonegen1.pp *= 3.5; updateVisuals();"
+        },
+        "foodgen1": {
+            "title": "Food Gen Multiplier",
+            "text": "x2 Food/Second<br><small><span id=\"prestige-foodgen1-prestige-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "type": "infinite",
+            "id": "foodgen1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.boosts.foodgen1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.boosts.foodgen1.pp",
+            "bought": "if (!prestigeUpgrades.boosts.foodgen1.checkIfCanBuy()) { return; }; prestigeUpgrades.boosts.foodgen1.isBought = true; resources.pp -= prestigeUpgrades.boosts.foodgen1.pp; prestigeUpgrades.boosts.foodgen1.level++; prestigeUpgrades.boosts.foodgen1.pp *= 3.5; updateVisuals();"
+        }
     },
-    "stonemulti1": {
-        "title": "Stone Multiplier",
-        "text": "x1.5 Stone<br><small><span id=\"prestige-stonemulti1-cost\">0</span> PP</small>",
-        "pp": 1,
-        "level": 0,
-        "id": "stonemulti1-prestige",
-        "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.stonemulti1.pp / 2)",
-        "checkIfCanBuy": "resources.pp >= prestigeUpgrades.stonemulti1.pp",
-        "bought": "if (!prestigeUpgrades.stonemulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.stonemulti1.isBought = true; resources.pp -= prestigeUpgrades.stonemulti1.pp; prestigeUpgrades.stonemulti1.level++; prestigeUpgrades.stonemulti1.pp *= 1.5; updateVisuals();"
-    },
-    "foodmulti1": {
-        "title": "Food Multiplier",
-        "text": "x1.5 Food<br><small><span id=\"prestige-foodmulti1-cost\">0</span> PP</small>",
-        "pp": 1,
-        "level": 0,
-        "id": "foodmulti1-prestige",
-        "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.foodmulti1.pp / 2)",
-        "checkIfCanBuy": "resources.pp >= prestigeUpgrades.foodmulti1.pp",
-        "bought": "if (!prestigeUpgrades.foodmulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.foodmulti1.isBought = true; resources.pp -= prestigeUpgrades.foodmulti1.pp; prestigeUpgrades.foodmulti1.level++; prestigeUpgrades.foodmulti1.pp *= 1.5; updateVisuals();"
+    "automation": {
+        "autobuilding": {
+            "title": "Auto Buildings",
+            "text": "Buys a random building which you can afford every <span id=\"prestige-autobuilding-prestige-current\">currentValue</span> Seconds<br><small><span id=\"prestige-autobuilding-prestige-cost\">0</span> PP</small>",
+            "pp": 10,
+            "level": 0,
+            "maxLevel": 10,
+            "currentValue": 5,
+            "type": "max",
+            "id": "autobuilding-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.automation.autobuilding.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.automation.autobuilding.pp",
+            "bought": "if (!prestigeUpgrades.automation.autobuilding.checkIfCanBuy() || prestigeUpgrades.automation.autobuilding.level >= prestigeUpgrades.automation.autobuilding.maxLevel) { return; }; prestigeUpgrades.automation.autobuilding.isBought = true; resources.pp -= prestigeUpgrades.automation.autobuilding.pp; prestigeUpgrades.automation.autobuilding.level++; prestigeUpgrades.automation.autobuilding.pp *= 3.5; prestigeUpgrades.automation.autobuilding.currentValue -= 0.4; updateVisuals();"
+        },
+        "autoupgrade": {
+            "title": "Auto Upgrades",
+            "text": "Buys a random upgrade which you can afford every <span id=\"prestige-autobuilding-prestige-current\">currentValue</span> Seconds<br><small><span id=\"prestige-autobuilding-prestige-cost\">0</span> PP</small>",
+            "pp": 10,
+            "level": 0,
+            "maxLevel": 10,
+            "currentValue": 5,
+            "type": "max",
+            "id": "autoupgrade-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.automation.autoupgrade.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.automation.autoupgrade.pp",
+            "bought": "if (!prestigeUpgrades.automation.autoupgrade.checkIfCanBuy() || prestigeUpgrades.automation.autoupgrade.level >= prestigeUpgrades.automation.autoupgrade.maxLevel) { return; }; prestigeUpgrades.automation.autoupgrade.isBought = true; resources.pp -= prestigeUpgrades.automation.autoupgrade.pp; prestigeUpgrades.automation.autoupgrade.level++; prestigeUpgrades.automation.autoupgrade.pp *= 3.5; prestigeUpgrades.automation.autoupgrade.currentValue -= 0.4; updateVisuals();"
+        }
     }
 }

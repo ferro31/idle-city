@@ -1,0 +1,26 @@
+{
+    "boosts": {
+        "woodmulti1": {
+            "title": "Wood Multiplier",
+            "text": "x1.5 All Wood Production<br><small><span id=\"prestige-woodmulti1-cost\">0</span> PP</small>",
+            "pp": 1,
+            "level": 0,
+            "id": "woodmulti1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.woodmulti1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.woodmulti1.pp",
+            "bought": "if (!prestigeUpgrades.woodmulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.woodmulti1.isBought = true; resources.pp -= prestigeUpgrades.woodmulti1.pp; prestigeUpgrades.woodmulti1.level++; prestigeUpgrades.woodmulti1.pp *= 3.5; updateVisuals();"
+        }
+    },
+    "automation": {
+        "autowood1": {
+            "title": "Auto Wood",
+            "text": "Auto wood<br><small><span id=\"prestige-autowood1-cost\">0</span> PP</small>",
+            "pp": 10,
+            "level": 0,
+            "id": "autowood1-prestige",
+            "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.autowood1.pp / 2)",
+            "checkIfCanBuy": "resources.pp >= prestigeUpgrades.autowood1.pp",
+            "bought": "if (!prestigeUpgrades.autowood1.checkIfCanBuy()) { return; }; prestigeUpgrades.autowood1.isBought = true; resources.pp -= prestigeUpgrades.autowood1.pp; prestigeUpgrades.autowood1.level++; prestigeUpgrades.autowood1.pp *= 3.5; updateVisuals();"
+        }
+    }
+}

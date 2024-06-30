@@ -68,7 +68,7 @@ function updateRates() {
                        + buildings.grove * 10 * (1 + upgrades.grove * 0.5);
 
     const woodMultiplier = (onetimers.woodsecond1.isBought ? 1.25 : 1) * (onetimers.woodsecond2.isBought ? 1.3 : 1) * (onetimers.woodall1.isBought ? 1.4 : 1) * (onetimers.woodall2.isBought ? 1.8923 : 1) * (onetimers.woodall3.isBought ? 2.3456 : 1);
-    const woodMultiplierPrestige = 1 + prestigeUpgrades.woodmulti1.level * 1.5
+    const woodMultiplierPrestige = (1.5 ** prestigeUpgrades.boosts.woodmulti1.level) * (2 ** prestigeUpgrades.boosts.woodgen1.level)
     const woodRate = woodBuildings * woodMultiplier * woodMultiplierPrestige;
 
     const stoneBuildings = buildings.quarry * (1 + upgrades.quarry * 0.5)
@@ -76,7 +76,7 @@ function updateRates() {
                         + buildings.masonry * 5 * (1 + upgrades.masonry * 0.5)
                         + buildings.crystalMine * 10 * (1 + upgrades.crystalMine * 0.5);
     const stoneMultiplier = (onetimers.stonesecond1.isBought ? 1.25 : 1) * (onetimers.stonesecond2.isBought ? 1.3 : 1) * (onetimers.stoneall1.isBought ? 1.4 : 1) * (onetimers.stoneall2.isBought ? 1.8923 : 1) * (onetimers.stoneall3.isBought ? 2.3456 : 1);
-    const stoneMultiplierPrestige = 1 + prestigeUpgrades.stonemulti1.level * 1.5
+    const stoneMultiplierPrestige = (1.5 ** prestigeUpgrades.boosts.stonemulti1.level) * (2 ** prestigeUpgrades.boosts.stonegen1.level)
     const stoneRate = stoneBuildings * stoneMultiplier * stoneMultiplierPrestige;
 
     const foodBuildings = buildings.farm * (1 + upgrades.farm * 0.5)
@@ -85,7 +85,7 @@ function updateRates() {
                        + buildings.breedingFacility * 10 * (1 + upgrades.breedingFacility * 0.5);
 
     const foodMultiplier = (onetimers.foodsecond1.isBought ? 1.25 : 1) * (onetimers.foodsecond2.isBought ? 1.3 : 1) * (onetimers.foodall1.isBought ? 1.4 : 1) * (onetimers.foodall2.isBought ? 1.8923 : 1) * (onetimers.foodall3.isBought ? 2.3456 : 1);
-    const foodMultiplierPrestige = 1 + prestigeUpgrades.foodmulti1.level * 1.5
+    const foodMultiplierPrestige = (1.5 ** prestigeUpgrades.boosts.foodmulti1.level) * (2 ** prestigeUpgrades.boosts.foodgen1.level)
     const foodRate = foodBuildings * foodMultiplier * foodMultiplierPrestige;
 
     document.getElementById('wood-rate').innerText = `(+${formatNumber(woodRate)}/s)`;
@@ -106,6 +106,24 @@ function calculateDeltaTime() {
     const deltaTime = (now - lastUpdateTime) / 1000;
     lastUpdateTime = now;
     return deltaTime;
+}
+
+function autoBuyBuildings() {
+    const affordableBuildings = getAffordableBuildings();
+    if (affordableBuildings.length > 0) {
+        const randomBuilding = affordableBuildings[Math.floor(Math.random() * affordableBuildings.length)];
+        buyBuilding(randomBuilding);
+        updateVisuals();
+    }
+}
+
+function autoBuyUpgrades() {
+    const affordableUpgrades = getAffordableUpgrades();
+    if (affordableUpgrades.length > 0) {
+        const randomUpgrade = affordableUpgrades[Math.floor(Math.random() * affordableUpgrades.length)];
+        buyUpgrade(randomUpgrade);
+        updateVisuals();
+    }
 }
 
 function autoGenerateResources() {
