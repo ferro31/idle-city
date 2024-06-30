@@ -37,6 +37,7 @@ function prestige() {
     onetimerContainer.innerHTML = '';
     setDefaultOnetimers(true);
     checkPrestigeButtonsAppearance();
+    document.getElementById('current-pp').innerHTML = formatNumber(resources.pp)
 }
 
 function unlockPrestige() {
@@ -78,7 +79,7 @@ function generateSubMenu(category) {
     });
 
     checkPrestigeButtonsAppearance();
-    updateUpgradeButtons();
+    updatePrestigeButtons();
 }
 
 function createOrUpdateButton(upgrade) {
@@ -96,6 +97,7 @@ function createOrUpdateButton(upgrade) {
         const container = document.getElementById('prestige-buttons-container');
         container.appendChild(button);
     }
+    updatePrestigeButtons();
 }
 
 function generatePrestigeButtons() {
@@ -149,7 +151,7 @@ function addClickFunctionsToUpgradeButtons() {
     });
 }
 
-function updateUpgradeButtons() {
+function updatePrestigeButtons() {
     Object.values(prestigeUpgrades).forEach(categoryData => {
         Object.values(categoryData).forEach(value => {
             const button = document.getElementById(value.id);

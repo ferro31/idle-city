@@ -116,7 +116,7 @@
         },
         "autoupgrade": {
             "title": "Auto Upgrades",
-            "text": "Buys a random upgrade which you can afford every <span id=\"prestige-autobuilding-prestige-current\">currentValue</span> Seconds<br><small><span id=\"prestige-autobuilding-prestige-cost\">0</span> PP</small>",
+            "text": "Buys a random upgrade which you can afford every <span id=\"prestige-autoupgrade-prestige-current\">currentValue</span> Seconds<br><small><span id=\"prestige-autoupgrade-prestige-cost\">0</span> PP</small>",
             "pp": 10,
             "level": 0,
             "maxLevel": 10,

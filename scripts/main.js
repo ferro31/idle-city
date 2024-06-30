@@ -57,7 +57,8 @@ function updateVisuals() {
     checkBuildingAppearance();
     checkUpgradeAppearance();
     checkPrestigeButtonsAppearance();
-    updateUpgradeButtons();
+    updatePrestigeButtons();
+    document.getElementById('current-pp').innerHTML = formatNumber(resources.pp)
 }
 
 
