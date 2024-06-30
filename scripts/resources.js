@@ -24,7 +24,7 @@ initializeEventListeners();
 
 function initializeEventListeners() {
     document.getElementById('wood').addEventListener('click', () => {
-        const woodMultiplierPrestige = (1 + prestigeUpgrades.woodmulti1.level * 1.5) * (2 **  prestigeUpgrades.boosts.woodclick1.level)
+        const woodMultiplierPrestige = (1 + prestigeUpgrades.boosts.woodmulti1.level * 1.5) * (2 **  prestigeUpgrades.boosts.woodclick1.level)
         resources.wood += resourcesPerClick.wood * (onetimers.woodall1.isBought ? 1.4 : 1) * (onetimers.woodall2.isBought ? 1.8923 : 1) * woodMultiplierPrestige;
         updateVisuals();
     });
