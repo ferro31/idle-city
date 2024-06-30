@@ -1,0 +1,14 @@
+{
+    "house": { "wood": 15, "stone": 7 },
+    "farm": { "wood": 22, "food": 15 },
+    "quarry": { "stone": 30, "wood": 7 },
+    "lumberMill": { "wood": 55, "stone": 32 },
+    "mine": { "stone": 47, "wood": 25 },
+    "bakery": { "food": 62, "wood": 40 },
+    "sawmill": { "wood": 150, "stone": 90 },
+    "masonry": { "stone": 152, "wood": 112 },
+    "granary": { "wood": 175, "food": 112 },
+    "grove": { "wood": 505, "stone": 355 },
+    "crystalMine": { "stone": 565, "food": 400 },
+    "breedingFacility": { "wood": 800, "food": 325 }
+} 

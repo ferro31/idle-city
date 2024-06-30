@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idle City</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="village">
+    <div class="resource right-border" id="wood">
+      <span>Wood</span>
+      <span id="wood-count">0</span>
+      <span id="wood-rate">(+0/s)</span>
+    </div>
+    <div class="resource right-border" id="stone">
+      <span>Stone</span>
+      <span id="stone-count">0</span>
+      <span id="stone-rate">(+0/s)</span>
+    </div>
+    <div class="resource" id="food">
+      <span>Food</span>
+      <span id="food-count">0</span>
+      <span id="food-rate">(+0/s)</span>
+    </div>
+  </div>
+  
+  <div class="body-content">
+    <div class="body-nav-buttons bottom-border">
+      <button class="nav-button current-nav" id="nav-production">Production</button>
+      <button class="nav-button hidden" id="nav-prestige">Prestige</button>
+    </div>
+    <div class="body-main" id="body-main">
+      <div class="building-stuff">
+        <div id="buildings">
+          <p class="section-title hidden" id="buildings-title-section">Buildings</p>
+          <div id="wood-buildings">
+            <button class="hidden" data-building="house" id="house">Build House (0)<br><small>10 Wood, 5 Stone</small></button>
+            <button class="hidden" data-building="lumberMill" id="lumberMill">Build Lumber Mill<br><small>30 Wood, 15 Stone</small></button>
+            <button class="hidden" data-building="sawmill" id="sawmill">Build Sawmill<br><small>40 Wood, 20 Stone</small></button>
+            <button class="hidden" data-building="grove" id="grove">Build Grove<br><small>50 Wood, 15 Stone</small></button>
+          </div>
+          <div id="stone-buildings">
+            <button class="hidden" data-building="quarry" id="quarry">Build Quarry (0)<br><small>20 Stone, 5 Wood</small></button>
+            <button class="hidden" data-building="mine" id="mine">Build Mine (0)<br><small>25 Stone, 10 Wood</small></button>
+            <button class="hidden" data-building="masonry" id="masonry">Build Masonry<br><small>50 Stone, 15 Wood</small></button>
+            <button class="hidden" data-building="crystalMine" id="crystalMine">Build crystalMine (0)<br><small>50 Stone, 20 Wood</small></button>
+          </div>
+          <div id="food-buildings">
+            <button class="hidden" data-building="farm" id="farm">Build Farm (0)<br><small>15 Wood, 10 Food</small></button>
+            <button class="hidden" data-building="bakery" id="bakery">Build Bakery (0)<br><small>35 Food, 20 Wood</small></button>
+            <button class="hidden" data-building="granary" id="granary">Build Granary<br><small>25 Wood, 30 Food</small></button>
+            <button class="hidden" data-building="breedingFacility" id="breedingFacility">Build breedingFacility (0)<br><small>50 Stone, 20 Wood</small></button>
+          </div>
+        </div>
+    
+        <div id="upgrades" class="hidden">
+          <p class="section-title top-border">Building Upgrades</p>
+          <div id="wood-upgrades">
+            <button class="hidden" data-upgrade="house" id="house-upgrade">Upgrade House (0)<br><small>20 Wood, 10 Stone</small></button>
+            <button class="hidden" data-upgrade="lumberMill" id="lumberMill-upgrade">Upgrade Lumber Mill (0)<br><small>45 Wood, 25 Stone</small></button>
+            <button class="hidden" data-upgrade="sawmill" id="sawmill-upgrade">Upgrade Sawmill (0)<br><small>45 Wood, 25 Stone</small></button>
+            <button class="hidden" data-upgrade="grove" id="grove-upgrade">Build Grove<br><small>50 Wood, 15 Stone</small></button>
+          </div>
+          <div id="stone-upgrades">
+            <button class="hidden" data-upgrade="quarry" id="quarry-upgrade">Upgrade Quarry (0)<br><small>40 Stone, 10 Wood</small></button>
+            <button class="hidden" data-upgrade="mine" id="mine-upgrade">Upgrade Mine (0)<br><small>50 Stone, 20 Wood</small></button>
+            <button class="hidden" data-upgrade="masonry" id="masonry-upgrade">Upgrade Masonry (0)<br><small>50 Stone, 20 Wood</small></button>
+            <button class="hidden" data-upgrade="crystalMine" id="crystalMine-upgrade">Upgrade crystalMine (0)<br><small>50 Stone, 20 Wood</small></button>
+          </div>
+          <div id="food-upgrades">
+            <button class="hidden" data-upgrade="farm" id="farm-upgrade">Upgrade Farm (0)<br><small>30 Wood, 20 Food</small></button>
+            <button class="hidden" data-upgrade="bakery" id="bakery-upgrade">Upgrade Bakery (0)<br><small>55 Food, 30 Wood</small></button>
+            <button class="hidden" data-upgrade="granary" id="granary-upgrade">Upgrade Granary (0)<br><small>55 Food, 30 Wood</small></button>
+            <button class="hidden" data-upgrade="breedingFacility" id="breedingFacility-upgrade">Upgrade breedingFacility (0)<br><small>50 Stone, 20 Wood</small></button>
+          </div>
+        </div>
+      </div>
+    
+      <div id="onetimers-div" class="onetimers-empty">
+        <div class="onetimers-all">
+          <p class="section-title section-title-onetimers">One Time Upgrades</p>
+          <div id="onetimers" class="left-border">
+            <!-- Buttons will be dynamically generated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body-prestige hidden" id="body-prestige">
+      <div class="prestige-main">
+        <div id="prestige">
+          <p class="prestige-text">Prestige</p>
+          <p>Prestiging Gives You Prestige Points (or PP), Which You Can Spend to Buy Big Boosts to Your Production</p>
+          <button id="prestige-button">Prestige for <span id="pp-count">-1</span> PP</button>
+        </div>
+        <div id="prestige-buttons-container" class="prestige-buttons-container">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/resources.js"></script>
+  <script src="scripts/buildings.js"></script>
+  <script src="scripts/upgrades.js"></script>
+  <script src="scripts/prestige.js"></script>
+  <script src="scripts/onetimers.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/visuals.js"></script>
+</body>
+</html>

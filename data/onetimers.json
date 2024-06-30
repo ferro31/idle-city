@@ -1,0 +1,282 @@
+{
+    "woodclick1": {
+        "title": "Wooden Axe",
+        "text": "+1 Wood/Click<br><small>75 Wood</small>",
+        "wood": 75,
+        "id": "woodclick1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodclick1.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodclick1.wood",
+        "bought": "if (!onetimers.woodclick1.checkIfCanBuy()) { return; }; resourcesPerClick.wood += 1; onetimers.woodclick1.isBought = true; resources.wood -= onetimers.woodclick1.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stoneclick1": {
+        "title": "Wooden Pickaxe",
+        "text": "+1 Stone/Click<br><small>75 Stone</small>",
+        "stone": 75,
+        "id": "stoneclick1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stoneclick1.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stoneclick1.stone",
+        "bought": "if (!onetimers.stoneclick1.checkIfCanBuy()) { return; }; resourcesPerClick.stone += 1; onetimers.stoneclick1.isBought = true; resources.stone -= onetimers.stoneclick1.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodclick1": {
+        "title": "Better Hygiene",
+        "text": "+1 Food/Click<br><small>75 Food</small>",
+        "food": 75,
+        "id": "foodclick1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodclick1.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodclick1.food",
+        "bought": "if (!onetimers.foodclick1.checkIfCanBuy()) { return; }; resourcesPerClick.food += 1; onetimers.foodclick1.isBought = true; resources.food -= onetimers.foodclick1.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodsecond1": {
+        "title": "Use Fertilizer",
+        "text": "x1.25 Wood/Second<br><small>225 Wood</small>",
+        "wood": 225,
+        "id": "woodsecond1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodsecond1.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodsecond1.wood",
+        "bought": "if (!onetimers.woodsecond1.checkIfCanBuy()) { return; }; onetimers.woodsecond1.isBought = true; resources.wood -= onetimers.woodsecond1.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stonesecond1": {
+        "title": "More Mines",
+        "text": "x1.25 Stone/Second<br><small>225 Stone</small>",
+        "stone": 225,
+        "id": "stonesecond1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stonesecond1.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stonesecond1.stone",
+        "bought": "if (!onetimers.stonesecond1.checkIfCanBuy()) { return; }; onetimers.stonesecond1.isBought = true; resources.stone -= onetimers.stonesecond1.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodsecond1": {
+        "title": "Bigger Lands",
+        "text": "x1.25 Food/Second<br><small>225 Food</small>",
+        "food": 225,
+        "id": "foodsecond1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodsecond1.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodsecond1.food",
+        "bought": "if (!onetimers.foodsecond1.checkIfCanBuy()) { return; }; onetimers.foodsecond1.isBought = true; resources.food -= onetimers.foodsecond1.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodclick2": {
+        "title": "New Swing Technique",
+        "text": "+3 Wood/Click<br><small>750 Wood</small>",
+        "wood": 750,
+        "id": "woodclick2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodclick2.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodclick2.wood",
+        "bought": "if (!onetimers.woodclick2.checkIfCanBuy()) { return; }; resourcesPerClick.wood += 3; onetimers.woodclick2.isBought = true; resources.wood -= onetimers.woodclick2.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stoneclick2": {
+        "title": "Sturdier Pickaxe",
+        "text": "+3 Stone/Click<br><small>750 Stone</small>",
+        "stone": 750,
+        "id": "stoneclick2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stoneclick2.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stoneclick2.stone",
+        "bought": "if (!onetimers.stoneclick2.checkIfCanBuy()) { return; }; resourcesPerClick.stone += 3; onetimers.stoneclick2.isBought = true; resources.stone -= onetimers.stoneclick2.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodclick2": {
+        "title": "Farming Skills",
+        "text": "+3 Food/Click<br><small>750 Food</small>",
+        "food": 750,
+        "id": "foodclick2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodclick2.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodclick2.food",
+        "bought": "if (!onetimers.foodclick2.checkIfCanBuy()) { return; }; resourcesPerClick.food += 3; onetimers.foodclick2.isBought = true; resources.food -= onetimers.foodclick2.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodsecond2": {
+        "title": "Advanced Forestry",
+        "text": "x1.3 Wood/Second<br><small>750 Wood</small>",
+        "wood": 750,
+        "id": "woodsecond2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodsecond2.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodsecond2.wood",
+        "bought": "if (!onetimers.woodsecond2.checkIfCanBuy()) { return; }; onetimers.woodsecond2.isBought = true; resources.wood -= onetimers.woodsecond2.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stonesecond2": {
+        "title": "Enhanced Quarries",
+        "text": "x1.3 Stone/Second<br><small>750 Stone</small>",
+        "stone": 750,
+        "id": "stonesecond2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stonesecond2.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stonesecond2.stone",
+        "bought": "if (!onetimers.stonesecond2.checkIfCanBuy()) { return; }; onetimers.stonesecond2.isBought = true; resources.stone -= onetimers.stonesecond2.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodsecond2": {
+        "title": "Agricultural Expansion",
+        "text": "x1.3 Food/Second<br><small>750 Food</small>",
+        "food": 750,
+        "id": "foodsecond2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodsecond2.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodsecond2.food",
+        "bought": "if (!onetimers.foodsecond2.checkIfCanBuy()) { return; }; onetimers.foodsecond2.isBought = true; resources.food -= onetimers.foodsecond2.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodall1": {
+        "title": "More Diverse Trees",
+        "text": "x1.4 All Wood Production<br><small>4.5K Wood</small>",
+        "wood": 4500,
+        "id": "woodall1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodall1.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodall1.wood",
+        "bought": "if (!onetimers.woodall1.checkIfCanBuy()) { return; }; onetimers.woodall1.isBought = true; resources.wood -= onetimers.woodall1.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stoneall1": {
+        "title": "Reinforced Mining Techniques",
+        "text": "x1.4 All Stone Production<br><small>4.5K Stone</small>",
+        "stone": 4500,
+        "id": "stoneall1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stoneall1.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stoneall1.stone",
+        "bought": "if (!onetimers.stoneall1.checkIfCanBuy()) { return; }; onetimers.stoneall1.isBought = true; resources.stone -= onetimers.stoneall1.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodall1": {
+        "title": "Selective Breeding",
+        "text": "x1.4 All Food Production<br><small>4.5K Food</small>",
+        "food": 4500,
+        "id": "foodall1-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodall1.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodall1.food",
+        "bought": "if (!onetimers.foodall1.checkIfCanBuy()) { return; }; onetimers.foodall1.isBought = true; resources.food -= onetimers.foodall1.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodclick3": {
+        "title": "Efficiency V",
+        "text": "+150 Wood/Click<br><small>22.5K Wood</small>",
+        "wood": 22500,
+        "id": "woodclick3-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodclick3.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodclick3.wood",
+        "bought": "if (!onetimers.woodclick3.checkIfCanBuy()) { return; }; resourcesPerClick.wood += 150; onetimers.woodclick3.isBought = true; resources.wood -= onetimers.woodclick3.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stoneclick3": {
+        "title": "Discover New Rocks",
+        "text": "+150 Stone/Click<br><small>22.5K Stone</small>",
+        "stone": 22500,
+        "id": "stoneclick3-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stoneclick3.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stoneclick3.stone",
+        "bought": "if (!onetimers.stoneclick3.checkIfCanBuy()) { return; }; resourcesPerClick.stone += 150; onetimers.stoneclick3.isBought = true; resources.stone -= onetimers.stoneclick3.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodclick3": {
+        "title": "CRISPR Technology",
+        "text": "+150 Food/Click<br><small>22.5K Food</small>",
+        "food": 22500,
+        "id": "foodclick3-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodclick3.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodclick3.food",
+        "bought": "if (!onetimers.foodclick3.checkIfCanBuy()) { return; }; resourcesPerClick.food += 150; onetimers.foodclick3.isBought = true; resources.food -= onetimers.foodclick3.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodall2": {
+        "title": "Wood Growth Enhancer",
+        "text": "x1.8923 All Wood Production<br><small>90K Wood</small>",
+        "wood": 90000,
+        "id": "woodall2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodall2.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodall2.wood",
+        "bought": "if (!onetimers.woodall2.checkIfCanBuy()) { return; }; onetimers.woodall2.isBought = true; resources.wood -= onetimers.woodall2.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stoneall2": {
+        "title": "Stone Extraction Augmenter",
+        "text": "x1.8923 All Stone Production<br><small>90K Stone</small>",
+        "stone": 90000,
+        "id": "stoneall2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stoneall2.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stoneall2.stone",
+        "bought": "if (!onetimers.stoneall2.checkIfCanBuy()) { return; }; onetimers.stoneall2.isBought = true; resources.stone -= onetimers.stoneall2.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodall2": {
+        "title": "Food Yield Amplifier",
+        "text": "x1.8923 All Food Production<br><small>90K Food</small>",
+        "food": 90000,
+        "id": "foodall2-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodall2.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodall2.food",
+        "bought": "if (!onetimers.foodall2.checkIfCanBuy()) { return; }; onetimers.foodall2.isBought = true; resources.food -= onetimers.foodall2.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodclick4": {
+        "title": "Haste II",
+        "text": "+250 Wood/Click<br><small>175K Wood</small>",
+        "wood": 175000,
+        "id": "woodclick4-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodclick4.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodclick4.wood",
+        "bought": "if (!onetimers.woodclick4.checkIfCanBuy()) { return; }; resourcesPerClick.wood += 250; onetimers.woodclick4.isBought = true; resources.wood -= onetimers.woodclick4.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stoneclick4": {
+        "title": "Diamond Pickaxe",
+        "text": "+250 Stone/Click<br><small>175K Stone</small>",
+        "stone": 175000,
+        "id": "stoneclick4-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stoneclick4.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stoneclick4.stone",
+        "bought": "if (!onetimers.stoneclick4.checkIfCanBuy()) { return; }; resourcesPerClick.stone += 250; onetimers.stoneclick4.isBought = true; resources.stone -= onetimers.stoneclick4.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodclick4": {
+        "title": "Crossbreeding",
+        "text": "+250 Food/Click<br><small>175K Food</small>",
+        "food": 175000,
+        "id": "foodclick4-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodclick4.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodclick4.food",
+        "bought": "if (!onetimers.foodclick4.checkIfCanBuy()) { return; }; resourcesPerClick.food += 250; onetimers.foodclick4.isBought = true; resources.food -= onetimers.foodclick4.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "woodall3": {
+        "title": "Timber Growth Catalyst",
+        "text": "x2.3456 All Wood Production<br><small>450K Wood</small>",
+        "wood": 450000,
+        "id": "woodall3-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.wood >= (onetimers.woodall3.wood / 2)",
+        "checkIfCanBuy": "resources.wood >= onetimers.woodall3.wood",
+        "bought": "if (!onetimers.woodall3.checkIfCanBuy()) { return; }; onetimers.woodall3.isBought = true; resources.wood -= onetimers.woodall3.wood; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "stoneall3": {
+        "title": "Lapidary Efficiency Enhancer",
+        "text": "x2.3456 All Stone Production<br><small>450K Stone</small>",
+        "stone": 450000,
+        "id": "stoneall3-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.stone >= (onetimers.stoneall3.stone / 2)",
+        "checkIfCanBuy": "resources.stone >= onetimers.stoneall3.stone",
+        "bought": "if (!onetimers.stoneall3.checkIfCanBuy()) { return; }; onetimers.stoneall3.isBought = true; resources.stone -= onetimers.stoneall3.stone; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "foodall3": {
+        "title": "Harvest Abundance Amplifier",
+        "text": "x2.3456 All Food Production<br><small>450K Food</small>",
+        "food": 450000,
+        "id": "foodall3-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.foodall3.food / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.foodall3.food",
+        "bought": "if (!onetimers.foodall3.checkIfCanBuy()) { return; }; onetimers.foodall3.isBought = true; resources.food -= onetimers.foodall3.food; document.getElementById(this.id).classList.add('hidden'); updateVisuals();"
+    },
+    "unlockprestige": {
+        "title": "Unlock Prestige",
+        "text": "Unlocks Prestige<br><small>1M of All Resources</small>",
+        "all": 1000000,
+        "id": "unlockprestige-onetime",
+        "isBought": false,
+        "checkIfCanUnlock": "resources.food >= (onetimers.unlockprestige.all / 2) && resources.stone >= (onetimers.unlockprestige.all / 2) && resources.wood >= (onetimers.unlockprestige.all / 2)",
+        "checkIfCanBuy": "resources.food >= onetimers.unlockprestige.all && resources.stone >= onetimers.unlockprestige.all && resources.wood >= onetimers.unlockprestige.all",
+        "bought": "if (!onetimers.unlockprestige.checkIfCanBuy()) { return; }; onetimers.unlockprestige.isBought = true; resources.food -= onetimers.unlockprestige.all; resources.stone -= onetimers.unlockprestige.all; resources.wood -= onetimers.unlockprestige.all; document.getElementById(this.id).classList.add('hidden'); unlockPrestige(); updateVisuals();"
+    }
+}

@@ -1,0 +1,223 @@
+/* Default flexbox styling */
+.body-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hide the div when it has the onetimers-empty class */
+.onetimers-empty {
+  display: none;
+}
+
+#buildings, #upgrades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#buildings > div, #upgrades > div {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Ensure that onetimers-div takes up no space when empty */
+#onetimers-div.onetimers-empty {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 20px 60px;
+  background-color: black;
+  color: white;
+  user-select: none; /* Disable text selection */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#village {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: solid white 1px;
+}
+
+.resource {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  visibility: visible;
+  width: 100%;
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav-button {
+  background-color: gray;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.current-nav {
+  background-color: darkgray;
+  cursor: default;
+}
+
+.body-nav-buttons {
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.right-border {
+  border-right: solid white 1px;
+}
+
+.onetimers-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title-onetimers {
+  padding-left: 50px;
+}
+
+.left-border {
+  border-left: solid white 1px;
+}
+
+.bottom-border {
+  border-bottom: solid white 1px;
+}
+
+.top-border {
+  border-top: solid white 1px;
+  padding-top: 25px;
+}
+
+.building-stuff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+#onetimers {
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.prestige-buttons-container {
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.prestige-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+}
+
+#prestige {
+  margin: -75px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.prestige-text {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+#prestige > p {
+  margin: 10px;
+}
+
+button {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 19px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+  text-align: center;
+  cursor: pointer;
+}
+
+button small {
+  display: block;
+  margin-top: 5px;
+  font-size: 15px;
+  color: #ebebeb;
+  font-weight: bold;
+}
+
+button.hidden {
+  display: none;
+}
+
+button.affordable {
+  background-color: green;
+}
+
+button.unaffordable {
+  background-color: red;
+}
+
+#progress {
+  margin-top: 20px;
+}
+
+progress {
+  width: 100%;
+  background-color: #444;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}

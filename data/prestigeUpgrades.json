@@ -1,0 +1,32 @@
+{
+    "woodmulti1": {
+        "title": "Wood Multiplier",
+        "text": "x1.5 Wood<br><small><span id=\"prestige-woodmulti1-cost\">0</span> PP</small>",
+        "pp": 1,
+        "level": 0,
+        "id": "woodmulti1-prestige",
+        "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.woodmulti1.pp / 2)",
+        "checkIfCanBuy": "resources.pp >= prestigeUpgrades.woodmulti1.pp",
+        "bought": "if (!prestigeUpgrades.woodmulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.woodmulti1.isBought = true; resources.pp -= prestigeUpgrades.woodmulti1.pp; prestigeUpgrades.woodmulti1.level++; prestigeUpgrades.woodmulti1.pp *= 1.5; updateVisuals();"
+    },
+    "stonemulti1": {
+        "title": "Stone Multiplier",
+        "text": "x1.5 Stone<br><small><span id=\"prestige-stonemulti1-cost\">0</span> PP</small>",
+        "pp": 1,
+        "level": 0,
+        "id": "stonemulti1-prestige",
+        "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.stonemulti1.pp / 2)",
+        "checkIfCanBuy": "resources.pp >= prestigeUpgrades.stonemulti1.pp",
+        "bought": "if (!prestigeUpgrades.stonemulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.stonemulti1.isBought = true; resources.pp -= prestigeUpgrades.stonemulti1.pp; prestigeUpgrades.stonemulti1.level++; prestigeUpgrades.stonemulti1.pp *= 1.5; updateVisuals();"
+    },
+    "foodmulti1": {
+        "title": "Food Multiplier",
+        "text": "x1.5 Food<br><small><span id=\"prestige-foodmulti1-cost\">0</span> PP</small>",
+        "pp": 1,
+        "level": 0,
+        "id": "foodmulti1-prestige",
+        "checkIfCanUnlock": "resources.pp >= (prestigeUpgrades.foodmulti1.pp / 2)",
+        "checkIfCanBuy": "resources.pp >= prestigeUpgrades.foodmulti1.pp",
+        "bought": "if (!prestigeUpgrades.foodmulti1.checkIfCanBuy()) { return; }; prestigeUpgrades.foodmulti1.isBought = true; resources.pp -= prestigeUpgrades.foodmulti1.pp; prestigeUpgrades.foodmulti1.level++; prestigeUpgrades.foodmulti1.pp *= 1.5; updateVisuals();"
+    }
+}
